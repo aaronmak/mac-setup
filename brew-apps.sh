@@ -27,7 +27,6 @@ brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" spectacle
 brew cask install --appdir="/Applications" telegram
-brew cask install --appdir="/Applications" the-unarchiver
 brew cask install --appdir="/Applications" whatsapp
 
 # Install Docker, which requires virtualbox
