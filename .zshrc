@@ -33,7 +33,6 @@ ZSH_THEME="awesomepanda"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   zsh-autosuggestions
-  autoswitch_virtualenv
   bundler
   git
   git-extras
