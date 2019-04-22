@@ -10,9 +10,10 @@ This repo builds on the awesome work from [Donne Martin](https://github.com/donn
 
 ## Installation
 
-* ZSH and oh-my-zsh (done)
-* Homebrew (Includes some helpful binaries and defaults) (done)
-* Bootstrap Dotfiles (done)
+* ZSH [`zsh`]
+  * oh-my-zsh [`oh-my-zsh`]
+* Homebrew (Includes some helpful binaries and defaults) [`brew`]
+* Bootstrap Dotfiles [`bootstrap`]
   * .aliases - Helpful shortcuts
   * .editorconfig - Configures text editor settings
     -- [Documentation](https://editorconfig.org)
@@ -24,8 +25,8 @@ This repo builds on the awesome work from [Donne Martin](https://github.com/donn
     -- [Documentation](https://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html)
   * .screenrc - Configures your terminal screen
     -- [Documentation](http://www.gnu.org/software/screen/manual/screen.html#Startup-Files)
-* Git config (done)
-* OSX config (done)
+* Git config [`git`]
+* OSX config [`osx`]
 * Text Editors
   * Visual Studio Code
   * Vim
@@ -34,4 +35,10 @@ This repo builds on the awesome work from [Donne Martin](https://github.com/donn
   * Ruby
   * JavaScript
   * Go
-* Applications (done)
+* Applications [`brew-apps`]
+
+Run the following and select the modules you would like to install.
+
+```shell
+./.dots.sh bootstrap osxprep zsh oh-my-zsh brew brew-apps git osx
+```
