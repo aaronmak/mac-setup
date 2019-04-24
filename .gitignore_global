@@ -36,6 +36,11 @@
 ehthumbs.db
 Thumbs.db
 
+# Secrets #
+###########
+*.pem
+
+
 # Visual Studio Code #
 ######################
 .vscode
