@@ -45,4 +45,9 @@ plugins=(
   tmuxinator
 )
 
+export SPACESHIP_PROMPT_DEFAULT_PREFIX=' '
+export SPACESHIP_PROMPT_DEFAULT_SUFFIX=' '
+
+export SPACESHIP_KUBECONTEXT_SHOW=false
+
 source $ZSH/oh-my-zsh.sh
