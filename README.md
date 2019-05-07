@@ -40,5 +40,5 @@ This repo builds on the awesome work from [Donne Martin](https://github.com/donn
 Run the following and select the modules you would like to install.
 
 ```shell
-./.dots.sh bootstrap osxprep zsh oh-my-zsh brew brew-apps git osx
+./dots.sh bootstrap osxprep zsh oh-my-zsh brew brew-apps git osx
 ```
