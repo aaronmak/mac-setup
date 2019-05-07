@@ -35,21 +35,14 @@ plugins=(
   zsh-autosuggestions
   bundler
   git
-  git-extras
   github
-  jira
   jsontools
   kubectl
   node
-  npm
-  osx
-  pyenv
   python
   rails
   tmux
   tmuxinator
-  vscode
-  yarn
 )
 
 source $ZSH/oh-my-zsh.sh
