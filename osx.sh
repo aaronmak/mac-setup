@@ -640,6 +640,9 @@ start_if_needed() {
 #start_if_needed iTerm
 #open "${HOME}/init/Solarized Dark.itermcolors"
 
+# Install iTerm2 shell integration
+curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
+
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 

@@ -45,9 +45,10 @@ plugins=(
   tmuxinator
 )
 
+# Spaceship theme settings - needs to be after initialising the theme
 export SPACESHIP_PROMPT_DEFAULT_PREFIX=' '
 export SPACESHIP_PROMPT_DEFAULT_SUFFIX=' '
-
 export SPACESHIP_KUBECONTEXT_SHOW=false
 
 source $ZSH/oh-my-zsh.sh
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
