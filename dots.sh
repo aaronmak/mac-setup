@@ -58,6 +58,15 @@ function runDots() {
             echo ""
             ./brew.sh
         fi
+        if [ "$ARG" == "nvim" ] || [ "$ARG" == "all" ]; then
+            # Run the nvim.sh Script
+            echo ""
+            echo "------------------------------"
+            echo "Installing neovim."
+            echo "------------------------------"
+            echo ""
+            ./brew.sh
+        fi
         if [ "$ARG" == "brew-apps" ] || [ "$ARG" == "all" ]; then
             # Run the brew.sh Script
             # For a full listing of installed formulae and apps, refer to
