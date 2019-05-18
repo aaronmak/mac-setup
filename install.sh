@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function runDots() {
+function install() {
     # Ask for the administrator password upfront
     sudo -v
 
@@ -107,7 +107,7 @@ function runDots() {
 read -rp "This script may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    runDots "$@"
+    install "$@"
 fi;
 
-unset runDots;
+unset install;
