@@ -1,6 +1,8 @@
-brew install nvim
+#!/usr/bin/env bash
 
-mkdir ~/.config/nvim
+# Install neovim as a replacement for vim
+brew install neovim
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
-pip3 install --user pynvip3 install --user pynvim
+# Install vim-plug as plugin manager
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

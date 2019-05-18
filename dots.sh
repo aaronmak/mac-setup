@@ -10,14 +10,6 @@ function runDots() {
     # Run sections based on command line arguments
     for ARG in "$@"
     do
-        if [ "$ARG" == "bootstrap" ] || [ "$ARG" == "all" ]; then
-            echo ""
-            echo "------------------------------"
-            echo "Syncing the mac-setup repo to your local machine."
-            echo "------------------------------"
-            echo ""
-            ./bootstrap.sh
-        fi
         if [ "$ARG" == "osxprep" ] || [ "$ARG" == "all" ]; then
             # Run the osxprep.sh Script
             echo ""

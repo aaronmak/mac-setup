@@ -33,16 +33,15 @@ brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed
 
-# Install `wget` with IRI support.
-brew install wget --with-iri
+# Install `wget`
+brew install wget
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
-brew install neovim
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
+brew install homebrew/php/php55
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -78,14 +77,14 @@ brew install xz
 
 # Install other useful binaries.
 brew install ack
+brew install the_silver_searcher
 brew install dark-mode
-#brew install exiv2
 brew install git
 brew install git-lfs
 brew install git-flow
 brew install git-extras
 brew install hub
-brew install imagemagick --with-webp
+brew install imagemagick
 brew install lua
 brew install lynx
 brew install p7zip

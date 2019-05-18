@@ -13,7 +13,3 @@ if test ! "$(command -v git credential-osxkeychain)"; then
   mv git-credential-osxkeychain /usr/local/bin/
   chmod u+x /usr/local/bin/git-credential-osxkeychain
 fi
-
-# Edit this to you use your own name and email
-#git config --global user.name "Aaron Mak"
-#git config --global user.email "aaronmakks@gmail.com"
