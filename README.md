@@ -16,7 +16,7 @@ This repo builds on the awesome work from [Donne Martin](https://github.com/donn
 * Git config [`git`]
 * OSX config [`osx`]
 * Applications [`brew-apps`]
-* Neovim [nvim]
+* Neovim [`nvim`]
 
 Run the following and select the modules you would like to install.
 
