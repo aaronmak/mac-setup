@@ -16,7 +16,7 @@ touch "$HOME/.config/nvim/init.vim"
 cat <<EOT > "$HOME/.config/nvim/init.vim"
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
-source ~/.vim/vimrc
+source ~/.vimrc
 EOT
 
 # Install vim-plug as plugin manager
