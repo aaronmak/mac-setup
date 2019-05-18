@@ -73,14 +73,10 @@ function runDots() {
             ./brew-apps.sh
         fi
         if [ "$ARG" == "git" ] || [ "$ARG" == "all" ]; then
-            # Run the brew.sh Script
-            # For a full listing of installed formulae and apps, refer to
-            # the commented brew.sh source file directly and tweak it to
-            # suit your needs.
+            # Run the git.sh Script
             echo ""
             echo "------------------------------"
             echo "Configuring git."
-            echo "Please make sure the git config is correct"
             echo "------------------------------"
             echo ""
             ./git.sh
