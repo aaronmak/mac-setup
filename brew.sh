@@ -38,6 +38,7 @@ brew install wget
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
+brew install macvim
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
@@ -77,7 +78,7 @@ brew install xz
 
 # Install other useful binaries.
 brew install ack
-brew install the_silver_searcher
+brew install cmake
 brew install dark-mode
 brew install git
 brew install git-lfs
@@ -94,6 +95,7 @@ brew install rename
 brew install rhino
 brew install speedtest_cli
 brew install ssh-copy-id
+brew install the_silver_searcher
 brew install tree
 brew install webkit2png
 brew install zopfli
