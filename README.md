@@ -17,7 +17,7 @@ This repo builds on the awesome work from [Donne Martin](https://github.com/donn
 * OSX config [`osx`]
 * Applications [`brew-apps`]
 * Neovim [`nvim`]
-* ASDF (version manager for multiple languages) _[`asdf`]
+* ASDF (version manager for multiple languages) [`asdf`]
 
 Run the following and select the modules you would like to install.
 
