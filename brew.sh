@@ -118,7 +118,11 @@ brew tap homebrew/cask-fonts
 brew cask install font-fira-code
 
 # Install ASDF (Extendable Version Manager for multiple language runtime versions)
-brew install asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+cd ~/.asdf
+git checkout "$(git describe --abbrev=0 --tags)"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+cd $DIR
 
 # Remove outdated versions from the cellar.
 brew cleanup

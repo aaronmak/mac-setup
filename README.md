@@ -1,6 +1,6 @@
 # mac-setup
 
-MacOS Development Setup Environment - OSX, ZSH, Homebrew, Vim, Neovim
+MacOS Development Setup Environment - OSX, ZSH, Homebrew, Vim, Neovim, asdf
 
 ## Motivation
 
@@ -17,11 +17,12 @@ This repo builds on the awesome work from [Donne Martin](https://github.com/donn
 * OSX config [`osx`]
 * Applications [`brew-apps`]
 * Neovim [`nvim`]
+* ASDF (version manager for multiple languages) _[`asdf`]
 
 Run the following and select the modules you would like to install.
 
 ```shell
-./install.sh osxprep zsh oh-my-zsh brew nvim brew-apps git osx
+./install.sh osxprep zsh oh-my-zsh brew nvim asdf brew-apps git osx
 ```
 
 Alternatively, use `all` to install all modules.
