@@ -8,6 +8,8 @@ A modular approach to setting up your Macbook for development.
 
 This repo builds on the awesome work from [Donne Martin](https://github.com/donnemartin) and [Thoughtbot](https://github.com/thoughtbot/).
 
+Compatible dotfiles can be found at https://github.com/aaronmak/dotfiles.
+
 ## Installation
 
 * ZSH [`zsh`]
