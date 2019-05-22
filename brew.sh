@@ -95,7 +95,7 @@ brew install rename
 brew install rhino
 brew install speedtest_cli
 brew install ssh-copy-id
-brew install the_silver_searcher
+brew install ripgrep
 brew install tree
 brew install webkit2png
 brew install zopfli
