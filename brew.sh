@@ -126,5 +126,8 @@ git checkout "$(git describe --abbrev=0 --tags)"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd $DIR
 
+# Install Google Cloud SDK
+brew cask install google-cloud-sdk
+
 # Remove outdated versions from the cellar.
 brew cleanup
