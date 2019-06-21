@@ -80,6 +80,7 @@ brew install xz
 brew install ack
 brew install cmake
 brew install dark-mode
+brew install entr
 brew install git
 brew install git-lfs
 brew install git-flow
