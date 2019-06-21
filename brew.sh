@@ -78,9 +78,12 @@ brew install xz
 
 # Install other useful binaries.
 brew install ack
+brew install bat
 brew install cmake
 brew install dark-mode
 brew install entr
+brew install fzf
+"$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg
 brew install git
 brew install git-lfs
 brew install git-flow
@@ -122,10 +125,10 @@ brew cask install font-fira-code
 
 # Install ASDF (Extendable Version Manager for multiple language runtime versions)
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-cd ~/.asdf
+cd ~/.asdf || exit
 git checkout "$(git describe --abbrev=0 --tags)"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-cd $DIR
+cd "${DIR}" || exit
 
 # Install Google Cloud SDK
 brew cask install google-cloud-sdk
