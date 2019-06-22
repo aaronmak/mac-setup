@@ -100,6 +100,7 @@ brew install rhino
 brew install speedtest_cli
 brew install ssh-copy-id
 brew install ripgrep
+brew install tig
 brew install tree
 brew install webkit2png
 brew install zopfli
