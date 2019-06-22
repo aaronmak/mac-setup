@@ -93,6 +93,7 @@ brew install imagemagick
 brew install lua
 brew install lynx
 brew install p7zip
+brew install peco
 brew install pigz
 brew install pv
 brew install rename
