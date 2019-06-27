@@ -134,5 +134,8 @@ cd "${DIR}" || exit
 # Install Google Cloud SDK
 brew cask install google-cloud-sdk
 
+# Hashicorp tools
+brew install terraform
+
 # Remove outdated versions from the cellar.
 brew cleanup
