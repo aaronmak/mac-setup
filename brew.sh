@@ -85,27 +85,30 @@ brew install fzf
 "$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg
 brew install git
 brew install git-lfs
-brew install git-flow
 brew install git-extras
+brew install git-flow
 brew install hub
 brew install imagemagick
 brew install lua
 brew install lynx
 brew install p7zip
+brew install pandoc
 brew install peco
 brew install pigz
+brew install pkg-config libffi
 brew install pv
 brew install rename
 brew install rhino
-brew install speedtest_cli
-brew install ssh-copy-id
 brew install ripgrep
+brew install speedtest-cli
+brew install ssh-copy-id
 brew install tig
+brew install tldr
 brew install tree
+brew install watch
 brew install webkit2png
+brew install wifi-password
 brew install zopfli
-brew install pkg-config libffi
-brew install pandoc
 
 # Lxml and Libxslt
 brew install libxml2
