@@ -33,8 +33,11 @@ brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed
 
-# Install `wget`
 brew install wget
+
+# Install tmux and plugin manage
+brew install tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
