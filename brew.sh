@@ -111,6 +111,7 @@ brew install tree
 brew install watch
 brew install webkit2png
 brew install wifi-password
+brew install z
 brew install zopfli
 
 # Lxml and Libxslt
