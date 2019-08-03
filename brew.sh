@@ -102,6 +102,7 @@ brew install pkg-config libffi
 brew install pv
 brew install rename
 brew install rhino
+brew install reattach-to-user-namespace
 brew install ripgrep
 brew install speedtest-cli
 brew install ssh-copy-id
