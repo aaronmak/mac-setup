@@ -100,6 +100,7 @@ brew install peco
 brew install pigz
 brew install pkg-config libffi
 brew install pv
+brew install pyenv
 brew install rename
 brew install rhino
 brew install reattach-to-user-namespace
