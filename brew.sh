@@ -97,6 +97,7 @@ brew install p7zip
 brew install pandoc
 brew install peco
 brew install pigz
+brew install pipenv
 brew install pkg-config libffi
 brew install pv
 brew install pyenv
