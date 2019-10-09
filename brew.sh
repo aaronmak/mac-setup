@@ -41,10 +41,9 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
-brew install homebrew/php/php55
+brew install grep
+brew install openssh
+brew install screen
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -98,6 +97,7 @@ brew install p7zip
 brew install pandoc
 brew install peco
 brew install pigz
+brew install pipenv
 brew install pkg-config libffi
 brew install pv
 brew install pyenv
