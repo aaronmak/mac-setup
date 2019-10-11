@@ -92,6 +92,7 @@ brew install git-flow
 brew install hub
 brew install imagemagick
 brew install jq
+brew install kubectx
 brew install lua
 brew install lynx
 brew install p7zip
