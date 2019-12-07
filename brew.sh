@@ -137,6 +137,7 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch 
 # Install FiraCode
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code
+brew cask install font-input
 
 # Install ASDF (Extendable Version Manager for multiple language runtime versions)
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
