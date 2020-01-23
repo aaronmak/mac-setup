@@ -32,7 +32,7 @@ brew install moreutils
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed
-
+brew install gpg
 brew install wget
 
 # Install tmux and plugin manage
