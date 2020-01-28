@@ -7,6 +7,7 @@ brew cask install --appdir="/Applications" java
 brew cask install --appdir="/Applications" xquartz
 
 # Development tool casks
+brew cask install --appdir="/Applications" devdocs
 brew cask install --appdir="/Applications" docker
 brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" virtualbox
