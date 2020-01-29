@@ -110,6 +110,7 @@ brew install rename
 brew install rhino
 brew install reattach-to-user-namespace
 brew install ripgrep
+brew install shellcheck
 brew install speedtest-cli
 brew install ssh-copy-id
 brew install tig
