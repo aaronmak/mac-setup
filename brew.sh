@@ -86,6 +86,7 @@ brew install dark-mode
 brew install entr
 brew install fzf
 "$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg
+brew install gh
 brew install git
 brew install git-lfs
 brew install git-extras
