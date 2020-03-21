@@ -98,6 +98,7 @@ brew install kubernetes-helm
 brew install kubectx
 brew install lua
 brew install lynx
+brew install mosh
 brew install p7zip
 brew install pandoc
 brew install peco
