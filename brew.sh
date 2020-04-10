@@ -37,6 +37,7 @@ brew install wget
 
 # Install tmux and plugin manage
 brew install tmux
+brew install tmate
 brew install tmuxinator
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
