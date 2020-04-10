@@ -16,6 +16,7 @@ brew cask install --appdir="/Applications" vagrant
 # Misc casks
 brew cask install --appdir="/Applications" 1password
 brew cask install --appdir="/Applications" agenda
+brew cask install --appdir="/Applications" calibre
 brew cask install --appdir="/Applications" copyq
 brew cask install --appdir="/Applications" disk-inventory-x
 brew cask install --appdir="/Applications" dropbox
