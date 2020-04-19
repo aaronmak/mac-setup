@@ -82,6 +82,7 @@ brew install xz
 # Install other useful binaries.
 brew install ack
 brew install bat
+brew install bitwarden-cli
 brew install cmake
 brew install dark-mode
 brew install entr
