@@ -14,11 +14,7 @@ brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" visual-studio-code
 
 # Misc casks
-brew cask install --appdir="/Applications" bitwarden
-brew cask install --appdir="/Applications" calibre
-brew cask install --appdir="/Applications" copyq
 brew cask install --appdir="/Applications" disk-inventory-x
-brew cask install --appdir="/Applications" dropbox
 brew cask install --appdir="/Applications" fantastical
 brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" gimp
@@ -26,7 +22,6 @@ brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" lunar
 brew cask install --appdir="/Applications" notion
 brew cask install --appdir="/Applications" sketch
-brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" spectacle
 brew cask install --appdir="/Applications" telegram
