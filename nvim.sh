@@ -21,7 +21,8 @@ EOT
 
 # Install neovim for python3
 eval "$(pyenv init -)"
-pyenv virtualenv 3.7.4 neovim3
+pyenv install 3.7.7
+pyenv virtualenv 3.7.7 neovim3
 pyenv activate neovim3
 pip install neovim
 pyenv deactivate
