@@ -5,6 +5,7 @@ brew cask install --appdir="/Applications" java
 brew cask install --appdir="/Applications" xquartz
 
 # Development tool casks
+brew cask install --appdir="/Applications" alacritty
 brew cask install --appdir="/Applications" android-studio
 brew cask install --appdir="/Applications" dash
 brew cask install --appdir="/Applications" docker
