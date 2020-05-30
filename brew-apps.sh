@@ -24,6 +24,7 @@ brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" gimp
 brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" lunar
+brew cask install --appdir="/Applications" notion
 brew cask install --appdir="/Applications" sketch
 brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" slack
