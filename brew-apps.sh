@@ -23,7 +23,7 @@ brew cask install --appdir="/Applications" lunar
 brew cask install --appdir="/Applications" notion
 brew cask install --appdir="/Applications" sketch
 brew cask install --appdir="/Applications" slack
-brew cask install --appdir="/Applications" spectacle
+brew cask install --appdir="/Applications" rectangle
 brew cask install --appdir="/Applications" telegram
 brew cask install --appdir="/Applications" whatsapp
 
