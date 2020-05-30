@@ -15,7 +15,6 @@ brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" visual-studio-code
 
 # Misc casks
-brew cask install --appdir="/Applications" agenda
 brew cask install --appdir="/Applications" bitwarden
 brew cask install --appdir="/Applications" calibre
 brew cask install --appdir="/Applications" copyq
