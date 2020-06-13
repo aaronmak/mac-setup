@@ -151,7 +151,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd "${DIR}" || exit
 
 # Install Google Cloud SDK
-brew cask install google-cloud-sdk
+curl https://sdk.cloud.google.com > install.sh
+bash install.sh --disable-prompts
+rm install.sh
 
 # Hashicorp tools
 brew install terraform
