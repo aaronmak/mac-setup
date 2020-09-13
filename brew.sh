@@ -89,14 +89,14 @@ brew install fzf
 "$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg
 brew install gh
 brew install git
-brew install git-lfs
 brew install git-extras
 brew install git-flow
+brew install git-lfs
 brew install hub
 brew install imagemagick
 brew install jq
-brew install kubernetes-helm
 brew install kubectx
+brew install kubernetes-helm
 brew install lua
 brew install lynx
 brew install mosh
@@ -106,11 +106,9 @@ brew install peco
 brew install pigz
 brew install pkg-config libffi
 brew install pv
-brew install pyenv
-brew install pyenv-virtualenv
+brew install reattach-to-user-namespace
 brew install rename
 brew install rhino
-brew install reattach-to-user-namespace
 brew install ripgrep
 brew install shellcheck
 brew install speedtest-cli
@@ -123,6 +121,10 @@ brew install webkit2png
 brew install wifi-password
 brew install z
 brew install zopfli
+
+# Python tools
+brew install poetry
+brew install pyenv
 
 # Lxml and Libxslt
 brew install libxml2
