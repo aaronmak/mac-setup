@@ -89,7 +89,6 @@ brew install fzf
 "$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg
 brew install gh
 brew install git
-brew install git-extras
 brew install git-flow
 brew install git-lfs
 brew install hub
