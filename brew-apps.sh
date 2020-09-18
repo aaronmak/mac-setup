@@ -8,6 +8,7 @@ brew cask install --appdir="/Applications" xquartz
 brew cask install --appdir="/Applications" alacritty
 brew cask install --appdir="/Applications" android-studio
 brew cask install --appdir="/Applications" dash
+brew cask install --appdir="/Applications" keycastr
 brew cask install --appdir="/Applications" docker
 brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" vagrant
