@@ -96,7 +96,6 @@ heroku update
 
 # Install FiraCode
 brew tap homebrew/cask-fonts
-brew cask install font-fira-code
 brew cask install font-input
 
 # Install ASDF (Extendable Version Manager for multiple language runtime versions)
