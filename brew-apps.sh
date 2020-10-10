@@ -10,8 +10,6 @@ brew cask install --appdir="/Applications" android-studio
 brew cask install --appdir="/Applications" dash
 brew cask install --appdir="/Applications" keycastr
 brew cask install --appdir="/Applications" docker
-brew cask install --appdir="/Applications" sublime-text
-brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" visual-studio-code
 
