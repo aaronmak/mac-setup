@@ -35,7 +35,7 @@ brew install gnu-sed
 brew install gpg
 brew install wget
 
-# Install tmux and plugin manage
+# Install tmux and plugin manager
 brew install tmux
 brew install tmate
 brew install tmuxinator
@@ -47,82 +47,17 @@ brew install grep
 brew install openssh
 brew install screen
 
-# Install font tools.
-brew tap bramstein/webfonttools
-brew install sfnt2woff
-brew install sfnt2woff-zopfli
-brew install woff2
-
-# Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
-brew install bfg
-brew install binutils
-brew install binwalk
-brew install cifer
-brew install dex2jar
-brew install dns2tcp
-brew install fcrackzip
-brew install foremost
-brew install hashpump
-brew install hydra
-brew install john
-brew install knock
-brew install netpbm
-brew install nmap
-brew install pngcheck
-brew install socat
-brew install sqlmap
-brew install tcpflow
-brew install tcpreplay
-brew install tcptrace
-brew install ucspi-tcp # `tcpserver` etc.
-brew install xz
-
-# Install other useful binaries.
-brew install ack
-brew install bat
-brew install bitwarden-cli
-brew install cmake
-brew install dark-mode
-brew install entr
-brew install fzf
-"$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg
+# Github CLI
 brew install gh
-brew install git
-brew install git-extras
-brew install git-flow
-brew install git-lfs
-brew install hub
-brew install imagemagick
-brew install jq
-brew install kubectx
-brew install kubernetes-helm
-brew install lua
-brew install lynx
-brew install mosh
-brew install p7zip
-brew install pandoc
-brew install peco
-brew install pigz
-brew install pkg-config libffi
-brew install pv
-brew install reattach-to-user-namespace
-brew install rename
-brew install rhino
-brew install ripgrep
-brew install shellcheck
-brew install speedtest-cli
-brew install ssh-copy-id
-brew install tig
-brew install tldr
-brew install tree
-brew install watch
-brew install webkit2png
-brew install wifi-password
-brew install z
-brew install zopfli
 
-# Python tools
+# Kubernetes
+brew install kubectx
+
+# Hashicorp
+brew install terraform
+brew install vault
+
+# Python
 brew install poetry
 
 # Lxml and Libxslt
@@ -131,16 +66,35 @@ brew install libxslt
 brew link libxml2 --force
 brew link libxslt --force
 
+# Useful Stuff
+"$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg
+brew install bat  # cat alternative
+brew install cmake
+brew install entr  # runs a command when input changes
+brew install fzf
+brew install git  # installs git
+brew install jq  # parsing json
+brew install lua  # installs lua
+brew install mosh  # ssh alternative (mobile shell)
+brew install pandoc  # document conversion
+brew install peco  # interactive text filter
+brew install reattach-to-user-namespace  # for tmux / vim to work properly with clipboard
+brew install ripgrep  # faster grep
+brew install shellcheck
+brew install speedtest-cli
+brew install ssh-copy-id
+brew install tig  # git alternative
+brew install tldr  # help/man alternative
+brew install tree  # displays children paths in tree format
+brew install watch  # runs a command on a schedule
+brew install z  # faster path navigation
+
 # Install Heroku
 brew install heroku/brew/heroku
 heroku update
 
-# Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package quicklookase qlvideo
-
 # Install FiraCode
 brew tap homebrew/cask-fonts
-brew cask install font-fira-code
 brew cask install font-input
 
 # Install ASDF (Extendable Version Manager for multiple language runtime versions)
@@ -154,9 +108,6 @@ cd "${DIR}" || exit
 curl https://sdk.cloud.google.com > install.sh
 bash install.sh --disable-prompts
 rm install.sh
-
-# Hashicorp tools
-brew install terraform
 
 # Remove outdated versions from the cellar.
 brew cleanup

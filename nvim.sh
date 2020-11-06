@@ -21,10 +21,11 @@ EOT
 
 # Install neovim for python3
 eval "$(pyenv init -)"
-pyenv install 3.7.7
-pyenv virtualenv 3.7.7 neovim3
+pyenv install 3.8.5
+pyenv virtualenv 3.8.5 neovim3
 pyenv activate neovim3
 pip install neovim
+pip install jedi
 pyenv deactivate
 
 # Install vim-plug as plugin manager
