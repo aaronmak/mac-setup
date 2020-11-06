@@ -124,7 +124,6 @@ brew install zopfli
 
 # Python tools
 brew install poetry
-brew install pyenv
 
 # Lxml and Libxslt
 brew install libxml2
