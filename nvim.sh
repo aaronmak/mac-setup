@@ -19,15 +19,6 @@ let &packpath = &runtimepath
 source ~/.vimrc
 EOT
 
-# Install neovim for python3
-eval "$(pyenv init -)"
-pyenv install 3.8.5
-pyenv virtualenv 3.8.5 neovim3
-pyenv activate neovim3
-pip install neovim
-pip install jedi
-pyenv deactivate
-
 # Install vim-plug as plugin manager
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

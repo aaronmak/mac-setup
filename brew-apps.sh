@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Core casks
-brew cask install --appdir="/Applications" java
 brew cask install --appdir="/Applications" xquartz
 
 # Development tool casks
