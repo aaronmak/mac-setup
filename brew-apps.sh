@@ -1,34 +1,39 @@
 #!/usr/bin/env bash
 
 # Core casks
-brew cask install --appdir="/Applications" xquartz
+brew install --cask xquartz
 
 # Development tool casks
-brew cask install --appdir="/Applications" alacritty
-brew cask install --appdir="/Applications" android-studio
-brew cask install --appdir="/Applications" dash
-brew cask install --appdir="/Applications" keycastr
-brew cask install --appdir="/Applications" docker
-brew cask install --appdir="/Applications" virtualbox
-brew cask install --appdir="/Applications" visual-studio-code
+brew install --cask alacritty
+brew install --cask android-studio
+brew install --cask dash
+brew install --cask keycastr
+brew install --cask docker
+brew install --cask virtualbox
+brew install --cask visual-studio-code
 
 # Misc casks
-brew cask install --appdir="/Applications" disk-inventory-x
-brew cask install --appdir="/Applications" fantastical
-brew cask install --appdir="/Applications" firefox
-brew cask install --appdir="/Applications" gimp
-brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" lunar
-brew cask install --appdir="/Applications" notion
-brew cask install --appdir="/Applications" sketch
-brew cask install --appdir="/Applications" slack
-brew cask install --appdir="/Applications" rectangle
-brew cask install --appdir="/Applications" telegram
-brew cask install --appdir="/Applications" whatsapp
+brew install --cask copyq
+brew install --cask disk-inventory-x
+brew install --cask fantastical
+brew install --cask firefox
+brew install --cask gimp
+brew install --cask google-chrome
+brew install --cask lunar
+brew install --cask notion
+brew install --cask rectangle
+brew install --cask sketch
+brew install --cask slack
+brew install --cask telegram
+brew install --cask whatsapp
 
 # Install Docker, which requires virtualbox
 brew install docker
 brew install boot2docker
+
+# Install Input Font
+brew tap homebrew/cask-fonts
+brew install --cask font-input
 
 # Remove outdated versions from the cellar.
 brew cleanup

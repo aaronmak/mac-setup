@@ -89,14 +89,6 @@ brew install tree  # displays children paths in tree format
 brew install watch  # runs a command on a schedule
 brew install z  # faster path navigation
 
-# Install Heroku
-brew install heroku/brew/heroku
-heroku update
-
-# Install FiraCode
-brew tap homebrew/cask-fonts
-brew cask install font-input
-
 # Install ASDF (Extendable Version Manager for multiple language runtime versions)
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 cd ~/.asdf || exit
