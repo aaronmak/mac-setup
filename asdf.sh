@@ -14,3 +14,11 @@ cd ~/.asdf
 git checkout master
 git fetch -p
 git checkout "$(git describe --abbrev=0 --tags)"
+
+# Install common plugins
+asdf plugin add python
+asdf plugin add nodejs
+asdf plugin add haskell
+asdf plugin add ruby
+asdf plugin add rust
+asdf plugin add R
