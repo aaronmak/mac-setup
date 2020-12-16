@@ -35,6 +35,10 @@ brew install boot2docker
 # Install Input Font
 brew tap homebrew/cask-fonts
 brew install --cask font-input
+git clone https://github.com/powerline/fonts.git --depth=1 ~/code/personal/fonts
+cd ~/code/personal/fonts || exit
+./install.sh
+cd ..
 
 # Remove outdated versions from the cellar.
 brew cleanup
