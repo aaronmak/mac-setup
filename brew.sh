@@ -67,7 +67,6 @@ brew link libxml2 --force
 brew link libxslt --force
 
 # Useful Stuff
-"$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg
 brew install bat  # cat alternative
 brew install cmake
 brew install entr  # runs a command when input changes
@@ -88,6 +87,9 @@ brew install tldr  # help/man alternative
 brew install tree  # displays children paths in tree format
 brew install watch  # runs a command on a schedule
 brew install z  # faster path navigation
+
+# fzf keybindings
+"$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg --no-bash --no-zsh
 
 # Install ASDF (Extendable Version Manager for multiple language runtime versions)
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
