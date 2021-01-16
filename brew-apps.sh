@@ -12,6 +12,7 @@ brew install --cask docker
 brew install --cask visual-studio-code
 
 # Misc casks
+brew install --cask alfred
 brew install --cask calibre
 brew install --cask copyq
 brew install --cask disk-inventory-x
@@ -36,6 +37,7 @@ mas install 409201541   # Pages
 mas install 409203825   # Numbers
 mas install 747648890   # Telegram
 mas install 803453959   # Slack
+mas install 937984704   # Amphetamine
 mas install 975937182   # Fantastical
 
 # Install Input Font
