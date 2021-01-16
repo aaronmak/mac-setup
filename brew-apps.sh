@@ -14,7 +14,6 @@ brew install --cask visual-studio-code
 # Misc casks
 brew install --cask alfred
 brew install --cask calibre
-brew install --cask copyq
 brew install --cask disk-inventory-x
 brew install --cask fantastical
 brew install --cask firefox
