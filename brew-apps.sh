@@ -9,7 +9,6 @@ brew install --cask android-studio
 brew install --cask dash
 brew install --cask keycastr
 brew install --cask docker
-brew install --cask virtualbox
 brew install --cask visual-studio-code
 
 # Misc casks
@@ -24,10 +23,6 @@ brew install --cask lunar
 brew install --cask notion
 brew install --cask rectangle
 brew install --cask sketch
-
-# Install Docker, which requires virtualbox
-brew install docker
-brew install boot2docker
 
 # Install mac apps
 mas install 1147396723  # Whatsapp Desktop
