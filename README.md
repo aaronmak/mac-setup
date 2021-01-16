@@ -20,11 +20,12 @@ Compatible dotfiles can be found at https://github.com/aaronmak/dotfiles.
 * Applications [`brew-apps`]
 * Neovim [`nvim`]
 * ASDF (version manager for multiple languages) [`asdf`]
+* Dockutil (To edit MacOS Dock) [`arrange-dock`]
 
 Run the following and select the modules you would like to install.
 
 ```shell
-./install.sh osxprep zsh oh-my-zsh brew nvim asdf brew-apps git osx
+./install.sh osxprep zsh oh-my-zsh brew nvim asdf brew-apps git osx arrange-dock
 ```
 
 Alternatively, use `all` to install all modules.

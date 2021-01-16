@@ -105,6 +105,16 @@ function install() {
             echo ""
             ./osx.sh
         fi
+        if [ "$ARG" == "arrange-dock" ] || [ "$ARG" == "all" ]; then
+          # Run the arrange-dock.sh Script
+          # Assumes that the applications are already installed
+            echo ""
+            echo "------------------------------"
+            echo "Adding default dock icons."
+            echo "------------------------------"
+            echo ""
+            ./osx.sh
+        fi
 
     done
 
