@@ -24,13 +24,24 @@ brew install --cask lunar
 brew install --cask notion
 brew install --cask rectangle
 brew install --cask sketch
-brew install --cask slack
-brew install --cask telegram
-brew install --cask whatsapp
 
 # Install Docker, which requires virtualbox
 brew install docker
 brew install boot2docker
+
+# Install mac apps
+mas install 1147396723  # Whatsapp Desktop
+mas install 1278508951  # Trello
+mas install 1449928544  # Wireless@SGx
+mas install 1475387142  # Tailscale
+mas install 1475897096  # Jira Cloud
+mas install 1480933944  # Vimari
+mas install 409183694   # Keynote
+mas install 409201541   # Pages
+mas install 409203825   # Numbers
+mas install 747648890   # Telegram
+mas install 803453959   # Slack
+mas install 975937182   # Fantastical
 
 # Install Input Font
 brew tap homebrew/cask-fonts
