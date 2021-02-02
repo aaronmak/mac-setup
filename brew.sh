@@ -70,6 +70,7 @@ brew link libxslt --force
 brew install bat  # cat alternative
 brew install cmake
 brew install entr  # runs a command when input changes
+brew install exa  # ls replacement
 brew install fzf
 brew install git  # installs git
 brew install jq  # parsing json
