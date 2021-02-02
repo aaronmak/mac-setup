@@ -84,6 +84,7 @@ brew install ripgrep  # faster grep
 brew install shellcheck
 brew install speedtest-cli
 brew install ssh-copy-id
+brew install starship  # fast terminal prompt
 brew install tig  # git alternative
 brew install tldr  # help/man alternative
 brew install tree  # displays children paths in tree format
