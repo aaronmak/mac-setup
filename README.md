@@ -13,7 +13,6 @@ Compatible dotfiles can be found at https://github.com/aaronmak/dotfiles.
 ## Installation
 
 * ZSH [`zsh`]
-  * oh-my-zsh [`oh-my-zsh`]
 * Homebrew (Includes some helpful binaries and defaults) [`brew`]
 * Git config [`git`]
 * OSX config [`osx`]

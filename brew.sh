@@ -90,6 +90,7 @@ brew install tldr  # help/man alternative
 brew install watch  # runs a command on a schedule
 brew install z  # faster path navigation
 brew install zsh-autosuggestions
+
 # fzf keybindings
 "$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg --no-bash --no-zsh
 
