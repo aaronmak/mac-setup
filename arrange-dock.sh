@@ -37,4 +37,4 @@ dockutil --add /Applications/Alacritty.app --no-restart --position 10
 
 dockutil --add "${HOME}/code" --no-restart --position 1
 
-dockutil --remove spacer-tiles
+killall Dock

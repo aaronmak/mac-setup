@@ -113,7 +113,7 @@ function install() {
             echo "Adding default dock icons."
             echo "------------------------------"
             echo ""
-            ./osx.sh
+            ./arrange-dock.sh
         fi
 
     done
