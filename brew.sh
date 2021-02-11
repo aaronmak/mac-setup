@@ -94,13 +94,6 @@ brew install zsh-autosuggestions
 # fzf keybindings
 "$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg --no-bash --no-zsh
 
-# Install ASDF (Extendable Version Manager for multiple language runtime versions)
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-cd ~/.asdf || exit
-git checkout "$(git describe --abbrev=0 --tags)"
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-cd "${DIR}" || exit
-
 # Install Google Cloud SDK
 curl https://sdk.cloud.google.com > install.sh
 bash install.sh --disable-prompts
