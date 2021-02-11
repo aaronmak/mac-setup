@@ -41,6 +41,10 @@ brew install tmate
 brew install tmuxinator
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# Install kube-tmux status line
+git clone https://github.com/jonmosco/kube-tmux.git ~/.tmux/kube-tmux
+ln -s ~/.tmux/kube-tmux/kube.tmux ~/.tmux/kube.tmux
+
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
 brew install grep
