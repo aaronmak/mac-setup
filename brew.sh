@@ -92,7 +92,7 @@ brew install starship  # fast terminal prompt
 brew install tig  # git alternative
 brew install tldr  # help/man alternative
 brew install watch  # runs a command on a schedule
-brew install z  # faster path navigation
+brew install zoxide  # faster path navigation
 brew install zsh-autosuggestions
 
 # fzf keybindings
