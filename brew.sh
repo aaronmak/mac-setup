@@ -61,9 +61,6 @@ brew install kubectx
 brew install terraform
 brew install vault
 
-# Python
-brew install poetry
-
 # Lxml and Libxslt
 brew install libxml2
 brew install libxslt
@@ -102,6 +99,9 @@ brew install zsh-autosuggestions
 curl https://sdk.cloud.google.com > install.sh
 bash install.sh --disable-prompts
 rm install.sh
+
+# Install poetry
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
 # Remove outdated versions from the cellar.
 brew cleanup
