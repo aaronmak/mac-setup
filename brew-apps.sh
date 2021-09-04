@@ -39,9 +39,9 @@ mas install 803453959   # Slack
 mas install 937984704   # Amphetamine
 mas install 975937182   # Fantastical
 
-# Install Input Font
+# Install Hack Nerd Font
 brew tap homebrew/cask-fonts
-brew install --cask font-input
+brew install --cask font-hack-nerd-font
 git clone https://github.com/powerline/fonts.git --depth=1 ~/code/personal/fonts
 cd ~/code/personal/fonts || exit
 ./install.sh
