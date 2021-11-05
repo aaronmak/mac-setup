@@ -12,9 +12,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 brew install asdf
 
 # Install common plugins
-asdf plugin add python
-asdf plugin add nodejs
-asdf plugin add haskell
-asdf plugin add ruby
-asdf plugin add rust
-asdf plugin add R
+asdf plugin-add python
+asdf plugin-add nodejs
+asdf plugin-add haskell
+asdf plugin-add ruby
+asdf plugin-add rust
+asdf plugin-add R
