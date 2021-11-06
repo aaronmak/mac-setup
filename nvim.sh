@@ -9,6 +9,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Install neovim as a replacement for vim
 brew install neovim
 
-# Install vim-plug as plugin manager
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# Install packer as nvim plugin manager
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
