@@ -10,6 +10,7 @@ brew install --cask dash
 brew install --cask keycastr
 brew install --cask docker
 brew install --cask visual-studio-code
+brew install --cask ngrok
 
 # Misc casks
 brew install --cask alfred
