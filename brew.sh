@@ -105,5 +105,8 @@ rm install.sh
 # Install poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
+# Install python-lsp-server
+pipx install 'python-lsp-server[all]'
+
 # Remove outdated versions from the cellar.
 brew cleanup
