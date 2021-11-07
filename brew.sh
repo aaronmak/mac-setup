@@ -79,6 +79,8 @@ brew install lua  # installs lua
 brew install mas  # CLI for MacOS App Store
 brew install mosh  # ssh alternative (mobile shell)
 brew install pandoc  # document conversion
+brew install pipx  # use python apps in isolated envs
+pipx ensurepath
 brew install peco  # interactive text filter
 brew install reattach-to-user-namespace  # for tmux / vim to work properly with clipboard
 brew install ripgrep  # faster grep
