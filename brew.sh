@@ -92,6 +92,7 @@ brew install tig  # git alternative
 brew install tealdeer  # help/man alternative
 brew install watch  # runs a command on a schedule
 brew install zoxide  # faster path navigation
+brew install qmk/qmk/qmk  # keyboard config
 brew install zsh-autosuggestions
 
 # fzf keybindings
