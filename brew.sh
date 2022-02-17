@@ -58,7 +58,6 @@ brew install gh
 brew install kubectx
 
 # Hashicorp
-brew install terraform
 brew install vault
 
 # Lxml and Libxslt
