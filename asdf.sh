@@ -9,7 +9,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install ASDF (Extendable Version Manager for multiple language runtime versions)
-brew install asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.9.0
 
 # Install common plugins
 asdf plugin-add python

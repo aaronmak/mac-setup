@@ -23,7 +23,6 @@ fi
 # the Dock to launch apps.
 defaults write com.apple.dock persistent-apps -array
 
-dockutil --add /Applications/Fantastical.app --no-restart --position 1
 dockutil --add /Applications/Safari.app --no-restart --position 2
 dockutil --add /Applications/Telegram.app --no-restart --position 3
 dockutil --add /Applications/WhatsApp.app --no-restart --position 4
