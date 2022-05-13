@@ -78,21 +78,22 @@ brew install lua  # installs lua
 brew install mas  # CLI for MacOS App Store
 brew install mosh  # ssh alternative (mobile shell)
 brew install pandoc  # document conversion
-brew install pipx  # use python apps in isolated envs
-pipx ensurepath
 brew install peco  # interactive text filter
+brew install pipx  # use python apps in isolated envs
+brew install postgresql
+brew install qmk/qmk/qmk  # keyboard config
 brew install reattach-to-user-namespace  # for tmux / vim to work properly with clipboard
 brew install ripgrep  # faster grep
 brew install shellcheck
 brew install speedtest-cli
 brew install ssh-copy-id
 brew install starship  # fast terminal prompt
-brew install tig  # git alternative
 brew install tealdeer  # help/man alternative
+brew install tig  # git alternative
 brew install watch  # runs a command on a schedule
 brew install zoxide  # faster path navigation
-brew install qmk/qmk/qmk  # keyboard config
 brew install zsh-autosuggestions
+pipx ensurepath
 
 # fzf keybindings
 "$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg --no-bash --no-zsh
