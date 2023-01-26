@@ -10,20 +10,16 @@ brew install --cask dash
 brew install --cask keycastr
 brew install --cask docker
 brew install --cask visual-studio-code
-brew install --cask ngrok
 
 # Misc casks
 brew install --cask 1password/tap/1password-cli
 brew install --cask alfred
 brew install --cask disk-inventory-x
-brew install --cask fantastical
 brew install --cask firefox
 brew install --cask gimp
 brew install --cask google-chrome
 brew install --cask lunar
-brew install --cask notion
 brew install --cask rectangle
-brew install --cask sketch
 
 # Install mac apps
 mas install 1147396723  # Whatsapp Desktop
@@ -38,7 +34,6 @@ mas install 409203825   # Numbers
 mas install 747648890   # Telegram
 mas install 803453959   # Slack
 mas install 937984704   # Amphetamine
-mas install 975937182   # Fantastical
 
 # Install Hack Nerd Font
 brew tap homebrew/cask-fonts
