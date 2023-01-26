@@ -77,6 +77,7 @@ brew install jq  # parsing json
 brew install lua  # installs lua
 brew install mas  # CLI for MacOS App Store
 brew install mosh  # ssh alternative (mobile shell)
+brew install node-build  # for nodejs
 brew install pandoc  # document conversion
 brew install peco  # interactive text filter
 brew install pipx  # use python apps in isolated envs
