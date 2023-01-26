@@ -13,6 +13,7 @@ brew install --cask visual-studio-code
 brew install --cask ngrok
 
 # Misc casks
+brew install --cask 1password/tap/1password-cli
 brew install --cask alfred
 brew install --cask disk-inventory-x
 brew install --cask fantastical
