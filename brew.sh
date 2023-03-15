@@ -99,11 +99,6 @@ pipx ensurepath
 # fzf keybindings
 "$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg --no-bash --no-zsh
 
-# Install Google Cloud SDK
-curl https://sdk.cloud.google.com > install.sh
-bash install.sh --disable-prompts
-rm install.sh
-
 # Install poetry
 curl -sSL https://install.python-poetry.org | python3 -
 
