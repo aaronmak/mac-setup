@@ -14,6 +14,7 @@ brew install --cask visual-studio-code
 # Misc casks
 brew install --cask 1password/tap/1password-cli
 brew install --cask alfred
+brew install --cask calibre
 brew install --cask disk-inventory-x
 brew install --cask firefox
 brew install --cask gimp
@@ -26,7 +27,6 @@ mas install 1147396723  # Whatsapp Desktop
 mas install 1278508951  # Trello
 mas install 1449928544  # Wireless@SGx
 mas install 1475387142  # Tailscale
-mas install 1475897096  # Jira Cloud
 mas install 1480933944  # Vimari
 mas install 409183694   # Keynote
 mas install 409201541   # Pages
