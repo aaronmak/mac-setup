@@ -71,7 +71,7 @@ brew install bat  # cat alternative
 brew install saml2aws  # login to AWS
 brew install cmake
 brew install entr  # runs a command when input changes
-brew install exa  # ls replacement
+brew install eza  # ls replacement
 brew install fd # find replacement
 brew install fzf
 brew install git  # installs git
