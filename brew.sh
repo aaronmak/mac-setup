@@ -95,6 +95,7 @@ brew install tealdeer  # help/man alternative
 brew install tig  # git alternative
 brew install watch  # runs a command on a schedule
 brew install zoxide  # faster path navigation
+brew install atuin  # synced history
 brew install zsh-autosuggestions
 pipx ensurepath
 
