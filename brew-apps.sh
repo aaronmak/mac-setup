@@ -8,7 +8,6 @@ brew install --cask alacritty
 brew install --cask android-studio
 brew install --cask dash
 brew install --cask keycastr
-brew install --cask docker
 brew install --cask visual-studio-code
 
 # Misc casks
