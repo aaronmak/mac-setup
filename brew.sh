@@ -67,9 +67,10 @@ brew link libxml2 --force
 brew link libxslt --force
 
 # Useful Stuff
+brew install atuin  # synced history
 brew install bat  # cat alternative
-brew install saml2aws  # login to AWS
 brew install cmake
+brew install duckdb  # fast local OLAP database, good for debugging
 brew install entr  # runs a command when input changes
 brew install eza  # ls replacement
 brew install fd # find replacement
@@ -87,6 +88,7 @@ brew install postgresql
 brew install qmk/qmk/qmk  # keyboard config
 brew install reattach-to-user-namespace  # for tmux / vim to work properly with clipboard
 brew install ripgrep  # faster grep
+brew install saml2aws  # login to AWS
 brew install shellcheck
 brew install speedtest-cli
 brew install ssh-copy-id
@@ -95,7 +97,6 @@ brew install tealdeer  # help/man alternative
 brew install tig  # git alternative
 brew install watch  # runs a command on a schedule
 brew install zoxide  # faster path navigation
-brew install atuin  # synced history
 brew install zsh-autosuggestions
 pipx ensurepath
 
