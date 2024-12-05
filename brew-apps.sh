@@ -18,7 +18,7 @@ brew install --cask disk-inventory-x
 brew install --cask firefox
 brew install --cask gimp
 brew install --cask google-chrome
-brew install --cask lunar
+brew install --cask betterdisplay
 brew install --cask rectangle
 
 # Install mac apps
