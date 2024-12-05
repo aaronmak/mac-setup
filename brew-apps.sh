@@ -5,7 +5,6 @@ brew install --cask xquartz
 
 # Development tool casks
 brew install --cask alacritty
-brew install --cask android-studio
 brew install --cask dash
 brew install --cask keycastr
 brew install --cask visual-studio-code
@@ -23,7 +22,6 @@ brew install --cask rectangle
 
 # Install mac apps
 mas install 1147396723  # Whatsapp Desktop
-mas install 1278508951  # Trello
 mas install 1449928544  # Wireless@SGx
 mas install 1475387142  # Tailscale
 mas install 1480933944  # Vimari
@@ -32,7 +30,6 @@ mas install 409201541   # Pages
 mas install 409203825   # Numbers
 mas install 747648890   # Telegram
 mas install 803453959   # Slack
-mas install 937984704   # Amphetamine
 
 # Install Hack Nerd Font
 brew tap homebrew/cask-fonts
