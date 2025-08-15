@@ -66,6 +66,9 @@ brew install libxslt
 brew link libxml2 --force
 brew link libxslt --force
 
+# Lua
+brew install luarocks
+
 # Useful Stuff
 brew install atuin  # synced history
 brew install bat  # cat alternative
