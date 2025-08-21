@@ -6,13 +6,17 @@
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do
+	sudo -n true
+	sleep 60
+	kill -0 "$$" || exit
+done 2>/dev/null &
 
 # Check for Homebrew,
 # Install if we don't have it
 if test ! "$(brew -v)"; then
-  echo "Installing homebrew..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+	echo "Installing homebrew..."
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 # Make sure we’re using the latest Homebrew.
@@ -70,36 +74,38 @@ brew link libxslt --force
 brew install luarocks
 
 # Useful Stuff
-brew install atuin  # synced history
-brew install bat  # cat alternative
+brew install atuin # synced history
+brew install bat   # cat alternative
 brew install cmake
-brew install duckdb  # fast local OLAP database, good for debugging
-brew install entr  # runs a command when input changes
-brew install eza  # ls replacement
-brew install fd # find replacement
+brew install duckdb # fast local OLAP database, good for debugging
+brew install entr   # runs a command when input changes
+brew install eza    # ls replacement
+brew install fd     # find replacement
 brew install fzf
-brew install git  # installs git
-brew install jq  # parsing json
-brew install lua  # installs lua
-brew install mas  # CLI for MacOS App Store
-brew install mosh  # ssh alternative (mobile shell)
-brew install node-build  # for nodejs
-brew install pandoc  # document conversion
-brew install peco  # interactive text filter
-brew install pipx  # use python apps in isolated envs
+brew install git        # installs git
+brew install jq         # parsing json
+brew install lua        # installs lua
+brew install mas        # CLI for MacOS App Store
+brew install mosh       # ssh alternative (mobile shell)
+brew install node-build # for nodejs
+brew install pandoc     # document conversion
+brew install peco       # interactive text filter
+brew install pipx       # use python apps in isolated envs
 brew install postgresql
-brew install qmk/qmk/qmk  # keyboard config
-brew install reattach-to-user-namespace  # for tmux / vim to work properly with clipboard
-brew install ripgrep  # faster grep
-brew install saml2aws  # login to AWS
+brew install qmk/qmk/qmk                # keyboard config
+brew install reattach-to-user-namespace # for tmux / vim to work properly with clipboard
+brew install ripgrep                    # faster grep
+brew install saml2aws                   # login to AWS
 brew install shellcheck
+brew install imagemagick # image maniplulation
+brew install ghostscript # postscript / pdf interpreter
 brew install speedtest-cli
 brew install ssh-copy-id
-brew install starship  # fast terminal prompt
-brew install tealdeer  # help/man alternative
-brew install tig  # git alternative
-brew install watch  # runs a command on a schedule
-brew install zoxide  # faster path navigation
+brew install starship # fast terminal prompt
+brew install tealdeer # help/man alternative
+brew install tig      # git alternative
+brew install watch    # runs a command on a schedule
+brew install zoxide   # faster path navigation
 brew install zsh-autosuggestions
 pipx ensurepath
 
