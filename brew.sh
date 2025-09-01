@@ -118,8 +118,5 @@ curl -sSL https://install.python-poetry.org | python3 -
 # Install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
-# Install python-lsp-server
-pipx install 'python-lsp-server[all]'
-
 # Remove outdated versions from the cellar.
 brew cleanup
