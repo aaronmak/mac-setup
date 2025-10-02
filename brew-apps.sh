@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Core casks
 brew install --cask xquartz
@@ -21,15 +21,15 @@ brew install --cask betterdisplay
 brew install --cask rectangle
 
 # Install mac apps
-mas install 1147396723  # Whatsapp Desktop
-mas install 1449928544  # Wireless@SGx
-mas install 1475387142  # Tailscale
-mas install 1480933944  # Vimari
-mas install 409183694   # Keynote
-mas install 409201541   # Pages
-mas install 409203825   # Numbers
-mas install 747648890   # Telegram
-mas install 803453959   # Slack
+mas install 1147396723 # Whatsapp Desktop
+mas install 1449928544 # Wireless@SGx
+mas install 1475387142 # Tailscale
+mas install 1480933944 # Vimari
+mas install 409183694  # Keynote
+mas install 409201541  # Pages
+mas install 409203825  # Numbers
+mas install 747648890  # Telegram
+mas install 803453959  # Slack
 
 # Install Hack Nerd Font
 brew tap homebrew/cask-fonts

@@ -1,21 +1,24 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Ask for the administrator password upfront
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `osx.sh` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
+while true; do
+	sudo -n true
+	sleep 60
+	kill -0 "$$" || exit
+done 2>/dev/null &
 
 # Install if we don't have it
 if test ! "$(brew -v)"; then
-  echo "Installing homebrew..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+	echo "Installing homebrew..."
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 if test ! "$(dockutil --version)"; then
-  echo "Install latest version from https://github.com/kcrawford/dockutil/releases"
-  open "https://github.com/kcrawford/dockutil/releases"
+	echo "Install latest version from https://github.com/kcrawford/dockutil/releases"
+	open "https://github.com/kcrawford/dockutil/releases"
 fi
 
 # Wipe all (default) app icons from the Dock
@@ -32,7 +35,6 @@ dockutil --add /Applications/calibre.app --no-restart --position 7
 dockutil --add /Applications/Slack.app --no-restart --position 8
 dockutil --add /Applications/Mail.app --no-restart --position 9
 dockutil --add '/Applications/Visual Studio Code.app' --no-restart --position 10
-dockutil --add /Applications/Alacritty.app --no-restart --position 11
 
 dockutil --add "${HOME}/code" --no-restart --position 1
 

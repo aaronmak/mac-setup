@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Install ASDF version manager for multiple languages
 
@@ -6,7 +6,11 @@
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do
+	sudo -n true
+	sleep 60
+	kill -0 "$$" || exit
+done 2>/dev/null &
 
 # Install ASDF (Extendable Version Manager for multiple language runtime versions)
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.9.0
