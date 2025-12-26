@@ -82,7 +82,9 @@ brew install entr   # runs a command when input changes
 brew install eza    # ls replacement
 brew install fd     # find replacement
 brew install fzf
+brew install ghostscript # postscript / pdf interpreter
 brew install git        # installs git
+brew install imagemagick # image maniplulation
 brew install jq         # parsing json
 brew install lua        # installs lua
 brew install mas        # CLI for MacOS App Store
@@ -97,13 +99,12 @@ brew install reattach-to-user-namespace # for tmux / vim to work properly with c
 brew install ripgrep                    # faster grep
 brew install saml2aws                   # login to AWS
 brew install shellcheck
-brew install imagemagick # image maniplulation
-brew install ghostscript # postscript / pdf interpreter
 brew install speedtest-cli
 brew install ssh-copy-id
 brew install starship # fast terminal prompt
 brew install tealdeer # help/man alternative
 brew install tig      # git alternative
+brew install usage   # spec for defining CLI tools
 brew install watch    # runs a command on a schedule
 brew install zoxide   # faster path navigation
 brew install zsh-autosuggestions
@@ -112,8 +113,8 @@ pipx ensurepath
 # fzf keybindings
 "$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg --no-bash --no-zsh
 
-# Install poetry
-curl -sSL https://install.python-poetry.org | python3 -
+# Install mise
+curl https://mise.run | sh
 
 # Install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
