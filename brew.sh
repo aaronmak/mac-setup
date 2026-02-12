@@ -102,6 +102,8 @@ brew install shellcheck
 brew install speedtest-cli
 brew install ssh-copy-id
 brew install starship # fast terminal prompt
+brew install tree-sitter # for nvim
+brew install tree-sitter-cli # for nvim
 brew install tealdeer # help/man alternative
 brew install tig      # git alternative
 brew install usage   # spec for defining CLI tools
