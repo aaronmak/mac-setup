@@ -22,15 +22,6 @@ function install() {
 			echo ""
 			./osxprep.sh
 		fi
-		if [ "$ARG" == "zsh" ] || [ "$ARG" == "all" ]; then
-			# Run the zsh.sh Script
-			echo ""
-			echo "------------------------------"
-			echo "Installing zsh to replace bash"
-			echo "------------------------------"
-			echo ""
-			./zsh.sh
-		fi
 		if [ "$ARG" == "brew" ] || [ "$ARG" == "all" ]; then
 			# Run the brew.sh Script
 			# For a full listing of installed formulae and apps, refer to
@@ -106,7 +97,7 @@ function install() {
 			# Assumes that the applications are already installed
 			echo ""
 			echo "------------------------------"
-			echo "Installing npm stools"
+			echo "Installing npm tools"
 			echo "------------------------------"
 			echo ""
 			./npm.sh
@@ -122,7 +113,7 @@ function install() {
 mkdir -p ~/code/work
 mkdir -p ~/code/personal
 
-read -rp "This script may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
+read "?This script may overwrite existing files in your home directory. Are you sure? (y/n) "
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 	install "$@"
