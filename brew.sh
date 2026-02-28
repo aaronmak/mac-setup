@@ -121,5 +121,8 @@ curl https://mise.run | sh
 # Install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
+# Install claude code
+curl -fsSL https://claude.ai/install.sh | bash
+
 # Remove outdated versions from the cellar.
 brew cleanup
