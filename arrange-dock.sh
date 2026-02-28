@@ -30,11 +30,9 @@ dockutil --add /Applications/Safari.app --no-restart --position 2
 dockutil --add /Applications/Calendar.app --no-restart --position 3
 dockutil --add /Applications/Telegram.app --no-restart --position 4
 dockutil --add /Applications/WhatsApp.app --no-restart --position 5
-dockutil --add /Applications/Dash.app --no-restart --position 6
 dockutil --add /Applications/calibre.app --no-restart --position 7
 dockutil --add /Applications/Slack.app --no-restart --position 8
 dockutil --add /Applications/Mail.app --no-restart --position 9
-dockutil --add '/Applications/Visual Studio Code.app' --no-restart --position 10
 
 dockutil --add "${HOME}/code" --no-restart --position 1
 
