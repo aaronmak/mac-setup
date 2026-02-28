@@ -53,15 +53,6 @@ function install() {
 			echo ""
 			./brew.sh
 		fi
-		if [ "$ARG" == "asdf" ] || [ "$ARG" == "all" ]; then
-			# Run the asdf.sh Script
-			echo ""
-			echo "------------------------------"
-			echo "Installing asdf."
-			echo "------------------------------"
-			echo ""
-			./asdf.sh
-		fi
 		if [ "$ARG" == "nvim" ] || [ "$ARG" == "all" ]; then
 			# Run the nvim.sh Script
 			echo ""
