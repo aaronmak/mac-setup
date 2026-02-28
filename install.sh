@@ -31,15 +31,6 @@ function install() {
 			echo ""
 			./zsh.sh
 		fi
-		if [ "$ARG" == "oh-my-zsh" ] || [ "$ARG" == "all" ]; then
-			# Run the zsh.sh Script
-			echo ""
-			echo "------------------------------"
-			echo "Installing oh-my-zsh framework"
-			echo "------------------------------"
-			echo ""
-			./oh-my-zsh.sh
-		fi
 		if [ "$ARG" == "brew" ] || [ "$ARG" == "all" ]; then
 			# Run the brew.sh Script
 			# For a full listing of installed formulae and apps, refer to
