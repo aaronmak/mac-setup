@@ -73,6 +73,9 @@ brew link libxslt --force
 # Lua
 brew install luarocks
 
+# 1Password
+brew install 1password-cli
+
 # Useful Stuff
 brew install atuin # synced history
 brew install bat   # cat alternative
