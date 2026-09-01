@@ -113,7 +113,8 @@ function install() {
 mkdir -p ~/code/work
 mkdir -p ~/code/personal
 
-read "?This script may overwrite existing files in your home directory. Are you sure? (y/n) "
+printf "%s" "This script may overwrite existing files in your home directory. Are you sure? (y/n) "
+read REPLY
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 	install "$@"
