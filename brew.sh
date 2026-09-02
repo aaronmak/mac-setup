@@ -97,6 +97,7 @@ brew install postgresql
 brew install qmk/qmk/qmk                # keyboard config
 brew install reattach-to-user-namespace # for tmux / vim to work properly with clipboard
 brew install ripgrep                    # faster grep
+brew install rtk  # save tokens
 brew install saml2aws                   # login to AWS
 brew install shellcheck
 brew install speedtest-cli
