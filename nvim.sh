@@ -1,17 +1,13 @@
 #!/usr/bin/env zsh
-
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `osx.sh` has finished
-while true; do
-	sudo -n true
-	sleep 60
-	kill -0 "$$" || exit
-done 2>/dev/null &
+setopt ERR_EXIT NO_UNSET PIPE_FAIL
+source "${0:A:h}/lib/homebrew.sh"
+load_homebrew
 
 # Install neovim as a replacement for vim
 brew install neovim
 
-# Install packer as nvim plugin manager
-git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+# Install packer once; preserve an existing checkout on subsequent runs.
+packer_dir="$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
+if [[ ! -d "$packer_dir/.git" ]]; then
+	git clone --depth 1 https://github.com/wbthomason/packer.nvim "$packer_dir"
+fi

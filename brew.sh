@@ -1,22 +1,15 @@
 #!/usr/bin/env zsh
+setopt ERR_EXIT NO_UNSET PIPE_FAIL
 
 # Install command-line tools using Homebrew.
 
-# Ask for the administrator password upfront.
-sudo -v
+source "${0:A:h}/lib/homebrew.sh"
 
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do
-	sudo -n true
-	sleep 60
-	kill -0 "$$" || exit
-done 2>/dev/null &
-
-# Check for Homebrew,
-# Install if we don't have it
-if test ! "$(brew -v)"; then
+if ! load_homebrew; then
 	echo "Installing homebrew..."
-	NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+	installer=$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
+	NONINTERACTIVE=1 /bin/bash -c "$installer"
+	load_homebrew
 fi
 
 # Make sure we’re using the latest Homebrew.
@@ -28,7 +21,14 @@ brew upgrade
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+brew_prefix=$(brew --prefix)
+checksum_link="$brew_prefix/bin/sha256sum"
+if [[ -L $checksum_link || ! -e $checksum_link ]]; then
+	ln -sfn "$brew_prefix/bin/gsha256sum" "$checksum_link"
+else
+	print -ru2 -- "Refusing to replace existing file: $checksum_link"
+	exit 1
+fi
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
@@ -43,14 +43,20 @@ brew install wget
 brew install tmux
 brew install tmate
 brew install tmuxinator
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+if [[ ! -d "$HOME/.tmux/plugins/tpm/.git" ]]; then
+	git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+fi
 
 # Install kube-tmux status line
-git clone https://github.com/jonmosco/kube-tmux.git ~/.tmux/kube-tmux
-ln -s ~/.tmux/kube-tmux/kube.tmux ~/.tmux/kube.tmux
+if [[ ! -d "$HOME/.tmux/kube-tmux/.git" ]]; then
+	git clone https://github.com/jonmosco/kube-tmux.git "$HOME/.tmux/kube-tmux"
+fi
+if [[ ! -e "$HOME/.tmux/kube.tmux" && ! -L "$HOME/.tmux/kube.tmux" ]]; then
+	ln -s "$HOME/.tmux/kube-tmux/kube.tmux" "$HOME/.tmux/kube.tmux"
+fi
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
+brew install vim
 brew install grep
 brew install openssh
 brew install screen
@@ -109,13 +115,14 @@ brew install usage   # spec for defining CLI tools
 brew install watch    # runs a command on a schedule
 brew install zoxide   # faster path navigation
 brew install zsh-autosuggestions
+brew install pipx
 pipx ensurepath
 
 # fzf keybindings
 "$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg --no-bash --no-zsh
 
 # Install mise
-curl https://mise.run | sh
+curl -fsSL https://mise.run | sh
 
 # Install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh

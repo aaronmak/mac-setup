@@ -2,10 +2,11 @@
 
 # Resolve module paths independently of the caller's working directory.
 SCRIPT_DIR=${0:A:h}
+source "$SCRIPT_DIR/lib/homebrew.sh" || exit $?
 
 usage() {
 	print -r -- "Usage: $0 <module> [module ...]"
-	print -r -- "Modules: osxprep brew nvim brew-apps git osx arrange-dock npm"
+	print -r -- "Modules: osxprep brew nvim brew-apps git osx npm"
 	print -r -- "Use all to run every module, or --help for this message."
 }
 
@@ -20,7 +21,7 @@ cleanup() {
 main() {
 	local arg module result reply
 	local -a modules
-	local -a all_modules=(osxprep brew nvim brew-apps git osx arrange-dock npm)
+	local -a all_modules=(osxprep brew nvim brew-apps git osx npm)
 
 	if (( $# == 0 )); then
 		usage >&2
@@ -35,7 +36,7 @@ main() {
 	for arg in "$@"; do
 		case $arg in
 			all) modules+=("${all_modules[@]}") ;;
-			osxprep|brew|nvim|brew-apps|git|osx|arrange-dock|npm)
+			osxprep|brew|nvim|brew-apps|git|osx|npm)
 				modules+=("$arg") ;;
 			*)
 				print -ru2 -- "Unknown module: $arg"
@@ -85,6 +86,10 @@ main() {
 		if (( result != 0 )); then
 			print -ru2 -- "Module $module failed (exit $result). Installation stopped."
 			return "$result"
+		fi
+		# Child scripts cannot export PATH back into this installer.
+		if [[ $module == brew ]]; then
+			load_homebrew || return $?
 		fi
 	done
 	print -- "Completed mac-setup. Restart your computer to ensure all updates take effect."

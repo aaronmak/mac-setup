@@ -1,19 +1,21 @@
 #!/usr/bin/env zsh
+setopt ERR_EXIT NO_UNSET PIPE_FAIL
 
-# Ask for the administrator password upfront
-sudo -v
+has_keychain_helper() {
+	command -v git-credential-osxkeychain >/dev/null 2>&1 && return 0
+	command -v git >/dev/null 2>&1 || return 1
+	local exec_dir
+	exec_dir=$(git --exec-path) || return $?
+	[[ -x "$exec_dir/git-credential-osxkeychain" ]]
+}
 
-# Keep-alive: update existing `sudo` time stamp until `osx.sh` has finished
-while true; do
-	sudo -n true
-	sleep 60
-	kill -0 "$$" || exit
-done 2>/dev/null &
-
-# Install git-credential-osxkeychain
-if test ! "$(command -v git credential-osxkeychain)"; then
-	echo "Installing git-credential-osxkeychain..."
-	curl -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
-	mv git-credential-osxkeychain /usr/local/bin/
-	chmod u+x /usr/local/bin/git-credential-osxkeychain
+# Modern Git distributions include the helper; avoid the legacy HTTP binary.
+if ! has_keychain_helper; then
+	source "${0:A:h}/lib/homebrew.sh"
+	load_homebrew
+	brew install git
+	if ! has_keychain_helper; then
+		print -ru2 -- "git-credential-osxkeychain is unavailable after installing Git."
+		exit 1
+	fi
 fi

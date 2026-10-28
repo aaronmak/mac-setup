@@ -1,4 +1,7 @@
 #!/usr/bin/env zsh
+setopt ERR_EXIT NO_UNSET PIPE_FAIL
+source "${0:A:h}/lib/homebrew.sh"
+load_homebrew
 
 # Core casks
 brew install --cask xquartz
@@ -24,10 +27,12 @@ mas install 747648890  # Telegram
 mas install 803453959  # Slack
 
 # Install Hack Nerd Font
-brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
-git clone https://github.com/powerline/fonts.git --depth=1 ~/code/personal/fonts
-cd ~/code/personal/fonts || exit
+if [[ ! -d "$HOME/code/personal/fonts/.git" ]]; then
+	mkdir -p "$HOME/code/personal"
+	git clone https://github.com/powerline/fonts.git --depth=1 "$HOME/code/personal/fonts"
+fi
+cd "$HOME/code/personal/fonts"
 ./install.sh
 cd ..
 
