@@ -1,24 +1,18 @@
 #!/usr/bin/env zsh
 
-# Ask for the administrator password upfront
-sudo -v
+# Read-only prerequisite check. Updates and installations are manual choices.
+if [[ $OSTYPE != darwin* ]]; then
+	print -ru2 -- "osxprep requires macOS."
+	exit 1
+fi
 
-# Keep-alive: update existing `sudo` time stamp until `osxprep.sh` has finished
-while true; do
-	sudo -n true
-	sleep 60
-	kill -0 "$$" || exit
-done 2>/dev/null &
+print -- "Review macOS updates in System Settings > General > Software Update."
 
-# Step 1: Update the OS and Install Xcode Tools
-echo "------------------------------"
-echo "Updating OSX.  If this requires a restart, run the script again."
-# Install all available updates
-sudo softwareupdate -ia --verbose
-# Install only recommended available updates
-#sudo softwareupdate -ir --verbose
-
-echo "------------------------------"
-echo "Installing Xcode Command Line Tools."
-# Install Xcode command line tools
-xcode-select --install
+if developer_dir=$(xcode-select --print-path 2>/dev/null) && [[ -d $developer_dir ]]; then
+	print -r -- "Selected developer directory: $developer_dir"
+else
+	print -ru2 -- "No valid developer directory is selected."
+	print -ru2 -- "To install command line tools manually, run: xcode-select --install"
+	print -ru2 -- "If Xcode is already installed, select it in Xcode > Settings > Locations."
+	exit 1
+fi
