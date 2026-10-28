@@ -1,0 +1,20 @@
+amends "package://github.com/jdx/hk/releases/download/v2.5.0/hk@2.5.0#/Config.pkl"
+
+steps {
+  ["markdownlint"] {
+    glob = List("**/*.md", "**/*.markdown")
+    check = "markdownlint-cli2 {{files}}"
+  }
+  ["shellcheck"] {
+    glob = List("**/*.sh", "**/*.bash", "**/*.dash", "**/*.ksh", "**/*.zsh")
+    // ShellCheck does not support Zsh; check those scripts with their interpreter.
+    check = """
+      for file in {{files}}; do
+        case "$(head -n 1 "$file")" in
+          *zsh*) zsh -n "$file" || exit $? ;;
+          *) shellcheck "$file" || exit $? ;;
+        esac
+      done
+      """
+  }
+}

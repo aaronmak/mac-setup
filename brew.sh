@@ -93,6 +93,7 @@ brew install fd     # find replacement
 brew install fzf
 brew install ghostscript # postscript / pdf interpreter
 brew install git        # installs git
+brew install hk         # git hook and pre-commit lint manager
 brew install imagemagick # image maniplulation
 brew install jq         # parsing json
 brew install lua        # installs lua

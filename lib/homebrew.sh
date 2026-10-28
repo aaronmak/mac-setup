@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # Load Homebrew into the current shell, including immediately after bootstrap.
 load_homebrew() {
 	local brew_bin

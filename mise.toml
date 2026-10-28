@@ -1,0 +1,13 @@
+[tools]
+hk = "2.5.0"
+node = "24.21.0"
+"npm:markdownlint-cli2" = "0.23.2"
+shellcheck = "0.11.0"
+
+[tasks.lint]
+description = "Check Markdown and shell scripts"
+run = "hk check --all"
+
+[tasks."hooks:install"]
+description = "Install this repository's Git hooks"
+run = "hk install --mise"
