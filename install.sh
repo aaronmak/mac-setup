@@ -1,123 +1,98 @@
 #!/usr/bin/env zsh
 
-function install() {
-	# Ask for the administrator password upfront
-	sudo -v
+# Resolve module paths independently of the caller's working directory.
+SCRIPT_DIR=${0:A:h}
 
-	# Keep-alive: update existing `sudo` time stamp until the script has finished
-	while true; do
-		sudo -n true
-		sleep 60
-		kill -0 "$$" || exit
-	done 2>/dev/null &
-
-	# Run sections based on command line arguments
-	for ARG in "$@"; do
-		if [ "$ARG" == "osxprep" ] || [ "$ARG" == "all" ]; then
-			# Run the osxprep.sh Script
-			echo ""
-			echo "------------------------------"
-			echo "Updating OSX and installing Xcode command line tools"
-			echo "------------------------------"
-			echo ""
-			./osxprep.sh
-		fi
-		if [ "$ARG" == "brew" ] || [ "$ARG" == "all" ]; then
-			# Run the brew.sh Script
-			# For a full listing of installed formulae and apps, refer to
-			# the commented brew.sh source file directly and tweak it to
-			# suit your needs.
-			echo ""
-			echo "------------------------------"
-			echo "Installing Homebrew along with some common formulae."
-			echo "This might take a while to complete, as some formulae need to be installed from source."
-			echo "------------------------------"
-			echo ""
-			./brew.sh
-		fi
-		if [ "$ARG" == "nvim" ] || [ "$ARG" == "all" ]; then
-			# Run the nvim.sh Script
-			echo ""
-			echo "------------------------------"
-			echo "Installing neovim."
-			echo "------------------------------"
-			echo ""
-			./nvim.sh
-		fi
-		if [ "$ARG" == "brew-apps" ] || [ "$ARG" == "all" ]; then
-			# Run the brew.sh Script
-			# For a full listing of installed formulae and apps, refer to
-			# the commented brew.sh source file directly and tweak it to
-			# suit your needs.
-			echo ""
-			echo "------------------------------"
-			echo "Installing Homebrew cask apps."
-			echo "This might take a while to complete, as some formulae need to be installed from source."
-			echo "------------------------------"
-			echo ""
-			./brew-apps.sh
-		fi
-		if [ "$ARG" == "git" ] || [ "$ARG" == "all" ]; then
-			# Run the git.sh Script
-			echo ""
-			echo "------------------------------"
-			echo "Configuring git."
-			echo "------------------------------"
-			echo ""
-			./git.sh
-		fi
-		if [ "$ARG" == "osx" ] || [ "$ARG" == "all" ]; then
-			# Run the osx.sh Script
-			# I strongly suggest you read through the commented osx.sh
-			# source file and tweak any settings based on your personal
-			# preferences. The script defaults are intended for you to
-			# customize. For example, if you are not running an SSD you
-			# might want to change some of the settings listed in the
-			# SSD section.
-			echo ""
-			echo "------------------------------"
-			echo "Setting sensible OSX defaults."
-			echo "------------------------------"
-			echo ""
-			./osx.sh
-		fi
-		if [ "$ARG" == "arrange-dock" ] || [ "$ARG" == "all" ]; then
-			# Run the arrange-dock.sh Script
-			# Assumes that the applications are already installed
-			echo ""
-			echo "------------------------------"
-			echo "Adding default dock icons."
-			echo "------------------------------"
-			echo ""
-			./arrange-dock.sh
-		fi
-
-		if [ "$ARG" == "npm" ] || [ "$ARG" == "all" ]; then
-			# Run the arrange-dock.sh Script
-			# Assumes that the applications are already installed
-			echo ""
-			echo "------------------------------"
-			echo "Installing npm tools"
-			echo "------------------------------"
-			echo ""
-			./npm.sh
-		fi
-
-	done
-
-	echo "------------------------------"
-	echo "Completed running .dots, restart your computer to ensure all updates take effect"
-	echo "------------------------------"
+usage() {
+	print -r -- "Usage: $0 <module> [module ...]"
+	print -r -- "Modules: osxprep brew nvim brew-apps git osx arrange-dock npm"
+	print -r -- "Use all to run every module, or --help for this message."
 }
 
-mkdir -p ~/code/work
-mkdir -p ~/code/personal
+cleanup() {
+	if [[ -n $SUDO_KEEPALIVE_PID ]]; then
+		kill "$SUDO_KEEPALIVE_PID" 2>/dev/null
+		wait "$SUDO_KEEPALIVE_PID" 2>/dev/null
+	fi
+	return 0
+}
 
-printf "%s" "This script may overwrite existing files in your home directory. Are you sure? (y/n) "
-read REPLY
-echo ""
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-	install "$@"
-fi
+main() {
+	local arg module result reply
+	local -a modules
+	local -a all_modules=(osxprep brew nvim brew-apps git osx arrange-dock npm)
 
-unset install
+	if (( $# == 0 )); then
+		usage >&2
+		return 2
+	fi
+	if (( $# == 1 )) && [[ $1 == --help || $1 == -h ]]; then
+		usage
+		return 0
+	fi
+
+	# Validate every argument before prompting or making changes.
+	for arg in "$@"; do
+		case $arg in
+			all) modules+=("${all_modules[@]}") ;;
+			osxprep|brew|nvim|brew-apps|git|osx|arrange-dock|npm)
+				modules+=("$arg") ;;
+			*)
+				print -ru2 -- "Unknown module: $arg"
+				usage >&2
+				return 2 ;;
+		esac
+	done
+	# Run repeated modules only once, preserving their requested order.
+	modules=("${(@u)modules}")
+	for module in "${modules[@]}"; do
+		if [[ ! -x "$SCRIPT_DIR/$module.sh" ]]; then
+			print -ru2 -- "Module script is missing or not executable: $SCRIPT_DIR/$module.sh"
+			return 1
+		fi
+	done
+
+	printf '%s' 'This script may overwrite existing files in your home directory. Are you sure? (y/n) '
+	if ! read -r reply; then
+		print -ru2 -- "No confirmation received; installation cancelled."
+		return 1
+	fi
+	if [[ $reply != [Yy] ]]; then
+		print -- "Installation cancelled."
+		return 0
+	fi
+
+	sudo -v || return $?
+	# Keep sudo credentials alive, and stop the helper when this script exits.
+	(
+		local sleep_pid
+		trap '[[ -z $sleep_pid ]] || kill "$sleep_pid" 2>/dev/null; exit 0' TERM INT
+		while true; do
+			sleep 60 &
+			sleep_pid=$!
+			wait "$sleep_pid"
+			sudo -n true || exit
+		done
+	) 2>/dev/null &
+	SUDO_KEEPALIVE_PID=$!
+
+	mkdir -p "$HOME/code/work" "$HOME/code/personal" || return $?
+	for module in "${modules[@]}"; do
+		print -r -- "Running $module..."
+		# Also give legacy module scripts a consistent working directory.
+		(cd "$SCRIPT_DIR" && "./$module.sh")
+		result=$?
+		if (( result != 0 )); then
+			print -ru2 -- "Module $module failed (exit $result). Installation stopped."
+			return "$result"
+		fi
+	done
+	print -- "Completed mac-setup. Restart your computer to ensure all updates take effect."
+}
+
+SUDO_KEEPALIVE_PID=''
+trap cleanup EXIT
+trap 'exit 130' INT
+trap 'exit 143' TERM
+main "$@"
+exit $?
