@@ -98,6 +98,8 @@ brew install mas        # CLI for MacOS App Store
 brew install pandoc     # document conversion
 brew install peco       # interactive text filter
 brew install postgresql
+brew trust qmk/qmk
+brew trust osx-cross/arm
 brew install qmk/qmk/qmk                # keyboard config
 brew install reattach-to-user-namespace # for tmux / vim to work properly with clipboard
 brew install ripgrep                    # faster grep
