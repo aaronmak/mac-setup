@@ -12,7 +12,6 @@ brew install --cask visual-studio-code
 
 # Misc casks
 brew install --cask calibre
-brew install --cask disk-inventory-x
 brew install --cask firefox
 brew install --cask gimp
 brew install --cask google-chrome
@@ -21,10 +20,8 @@ brew install --cask rectangle
 # Install mac apps
 mas install 1147396723 # Whatsapp Desktop
 mas install 1449928544 # Wireless@SGx
-mas install 1475387142 # Tailscale
 mas install 1480933944 # Vimari
-mas install 747648890  # Telegram
-mas install 803453959  # Slack
+mas install 1569813296 # 1Password for Safari
 
 # Install Hack Nerd Font
 brew install --cask font-hack-nerd-font
