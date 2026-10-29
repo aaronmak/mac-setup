@@ -112,8 +112,6 @@ brew install usage   # spec for defining CLI tools
 brew install watch    # runs a command on a schedule
 brew install zoxide   # faster path navigation
 brew install zsh-autosuggestions
-brew install pipx
-pipx ensurepath
 
 # fzf keybindings
 "$(brew --prefix)"/opt/fzf/install --key-bindings --completion --xdg --no-bash --no-zsh
