@@ -19,7 +19,6 @@ brew install --cask rectangle
 
 # Install mac apps
 mas install 1147396723 # Whatsapp Desktop
-mas install 1449928544 # Wireless@SGx
 mas install 1480933944 # Vimari
 mas install 1569813296 # 1Password for Safari
 
