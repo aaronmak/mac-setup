@@ -67,9 +67,6 @@ brew install gh
 # Kubernetes
 brew install kubectx
 
-# Hashicorp
-brew install vault
-
 # Lxml and Libxslt
 brew install libxml2
 brew install libxslt
